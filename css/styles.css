@@ -118,6 +118,18 @@ hr {
   border-radius: 5px;
 }
 
+.billing-address {
+  display: none;
+}
+
+.policy-plan-container {
+  width: 85%;
+  margin: auto;
+  padding-top: 10px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
 .sub-container {
   width: 85%;
   margin: auto;

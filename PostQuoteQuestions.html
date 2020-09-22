@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" href="favicon.ico">
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Nanum+Myeongjo:wght@700&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
     <div class="top-header">
@@ -32,9 +33,24 @@
         <input type="text" name="" value="" class="textBox">
         <label>Sort Code</label>
         <input type="text" name="" value="" class="textBox">
+          <label for="optin">Is your Billing address different?</label>
+          <input type="checkbox" name="my-checkbox" id="optin">
+          <div class="billing-address" id="billingAddress">
+            <label>Address</label>
+            <input type="text" name="" value="" class="textBox">
+            <input type="text" name="" value="" class="textBox">
+            <label>City</label>
+            <input type="text" name="" value="" class="textBox">
+            <label>Postalcode / ZIP Code</label>
+            <input type="text" name="" value="" class="textBox">
+            <label>Country</label>
+              <select class="selectBox">
+                <option disabled selected value> Please Select </option>
+                <option>United Kingdom</option>
+                <option>United States</option>
+            </select>
+          </div><br>
         <label>I agree to have read and accepted the T&Cs</label>
-        <input type="text" name="" value="" class="textBox">
-        <label>Country</label>
           <select class="selectBox">
             <option disabled selected value> Please Select </option>
             <option>Yes</option>
@@ -57,6 +73,17 @@
 <div class="footer-container">
   <p>Site built and hosted using <a class="footer-link" href="https://www.instanda.com/">Instanda</a> v1.58 insurance software</p>
 </div>
-
   </body>
+  <script type="text/javascript">
+  $(document).ready(function(){
+  $("#optin").change(function () {
+     if ($("#optin").is(':checked')) {
+         $('#billingAddress').slideDown('slow'); //enable input
+     } else {
+         $('#billingAddress').slideUp('slow'); //disable input
+         //document.getElementById("billing-address").style.display = "none";
+     }
+ });
+ });
+  </script>
 </html>
